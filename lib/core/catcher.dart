@@ -22,6 +22,7 @@ class Catcher extends ReportModeAction {
   static late Catcher _instance;
   static GlobalKey<NavigatorState>? _navigatorKey;
 
+  final PackageInfo packageInfo;
   /// Root widget which will be ran
   final Widget? rootWidget;
 
@@ -60,6 +61,7 @@ class Catcher extends ReportModeAction {
 
   /// Builds catcher instance
   Catcher({
+    required this.packageInfo,
     this.rootWidget,
     this.runAppFunction,
     this.releaseConfig,
@@ -411,12 +413,21 @@ class Catcher extends ReportModeAction {
     _applicationParameters['environment'] =
         ApplicationProfileManager.getApplicationProfile().name;
 
-    PackageInfo.fromPlatform().then((packageInfo) {
+    //如果是鸿蒙
+    const isHarmony = true;
+    if (isHarmony) {
       _applicationParameters['version'] = packageInfo.version;
       _applicationParameters['appName'] = packageInfo.appName;
       _applicationParameters['buildNumber'] = packageInfo.buildNumber;
       _applicationParameters['packageName'] = packageInfo.packageName;
-    });
+    } else {
+      PackageInfo.fromPlatform().then((packageInfo) {
+        _applicationParameters['version'] = packageInfo.version;
+        _applicationParameters['appName'] = packageInfo.appName;
+        _applicationParameters['buildNumber'] = packageInfo.buildNumber;
+        _applicationParameters['packageName'] = packageInfo.packageName;
+      });
+    }
   }
 
   ///We need to setup localizations lazily because context needed to setup these
