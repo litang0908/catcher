@@ -22,9 +22,15 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   fluttertoast: ^8.2.3
-  device_info_plus: ^7.0.0
-  device_info_plus_platform_interface: ^6.0.0
-  package_info_plus: ^3.0.0
+  device_info_plus:
+    git:
+      url: "https://gitee.com/openharmony-sig/flutter_plus_plugins.git"
+      path: "packages/device_info_plus/device_info_plus"
+  device_info_plus_platform_interface: ^7.0.0
+  package_info_plus:
+    git:
+      url: "https://gitee.com/openharmony-sig/flutter_plus_plugins.git"
+      path: "packages/package_info_plus/package_info_plus"
   mailer: ^6.1.0
   dio: ^4.0.0
   flutter_mailer: ^2.1.2
@@ -33,4 +39,4 @@ dependencies:
   universal_io: ^2.0.4
 
 dev_dependencies:
-  very_good_analysis: ^5.1.0
+  very_good_analysis: ^4.0.0+1
