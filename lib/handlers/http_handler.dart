@@ -64,8 +64,8 @@ class HttpHandler extends ReportHandler {
       }
 
       final options = Options(
-        sendTimeout: requestTimeout,
-        receiveTimeout: responseTimeout,
+        sendTimeout: Duration(milliseconds: requestTimeout),
+        receiveTimeout: Duration(milliseconds: responseTimeout),
         headers: mutableHeaders,
       );
 
