@@ -5,5 +5,6 @@ enum PlatformType {
   macOS,
   linux,
   windows,
+  harmony,
   unknown,
 }

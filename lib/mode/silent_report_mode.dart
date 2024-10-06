@@ -18,5 +18,6 @@ class SilentReportMode extends ReportMode {
         PlatformType.linux,
         PlatformType.macOS,
         PlatformType.windows,
+        PlatformType.harmony,
       ];
 }
