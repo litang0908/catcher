@@ -766,6 +766,9 @@ class Catcher extends ReportModeAction {
     if (ApplicationProfileManager.isMacOS()) {
       return PlatformType.macOS;
     }
+    if (ApplicationProfileManager.isHarmony()) {
+      return PlatformType.harmony;
+    }
 
     return PlatformType.unknown;
   }

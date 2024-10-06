@@ -36,4 +36,6 @@ class ApplicationProfileManager {
 
   ///Check if current platform is macOS
   static bool isMacOS() => Platform.isMacOS;
+
+  static bool isHarmony() => Platform.operatingSystem == 'ohos';
 }
