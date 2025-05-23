@@ -24,12 +24,12 @@ dependencies:
   fluttertoast: ^8.2.3
   device_info_plus:
     git:
-      url: "https://gitee.com/openharmony-sig/flutter_plus_plugins.git"
+      url: "https://gitcode.com/openharmony-sig/flutter_plus_plugins.git"
       path: "packages/device_info_plus/device_info_plus"
   device_info_plus_ohos: ^0.0.8
   package_info_plus:
     git:
-      url: "https://gitee.com/openharmony-sig/flutter_plus_plugins.git"
+      url: "https://gitcode.com/openharmony-sig/flutter_plus_plugins.git"
       path: "packages/package_info_plus/package_info_plus"
   package_info_plus_ohos: any
   mailer: ^6.1.0
